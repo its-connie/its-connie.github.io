@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html">Connie</a>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container about-page">
+      <section class="about-grid">
+        <!-- Blank image area: replace background-image or insert <img> as needed -->
+        <div
+          class="profile-image"
+          role="img"
+          aria-label="Profile image placeholder"
+        >
+          <!-- Add your image here, e.g.
+             <img src="assets/images/profile.jpg" alt="Connie"> -->
+        </div>
+
+        <div class="about-content">
+          <h1>About Me</h1>
+
+          <section class="bio">
+            <h2>Biography</h2>
+            <p>
+              <!-- Replace this with your biography -->
+              Connie is a designer based in New York City. In her free time,
+              you’ll find her noodling away on weird instruments, thinking and
+              writing about sociotechnical systems, or bopping around the City
+              as an amateur public space critic. She loves a good side quest and
+              has strong opinions about how they make us more human. Ask her
+              about it sometime!
+            </p>
+          </section>
+
+          <section class="mission">
+            <h2>My Mission</h2>
+            <p>
+              <!-- Replace this with your mission statement -->
+              My mission is to create digital experiences that are inclusive,
+              performant, and delightful. I aim to solve real user problems with
+              pragmatic design and engineering.
+            </p>
+          </section>
+
+          <section class="links">
+            <h2>Connect</h2>
+            <ul>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/YOUR-LINKEDIN"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="cv.pdf" target="_blank" rel="noopener noreferrer"
+                  >Download CV (PDF)</a
+                >
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>&copy; <span id="year"></span> Connie</small>
+      </div>
+    </footer>
+
+    <script>
+      // Small script to set current year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
