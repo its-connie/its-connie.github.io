@@ -1,63 +1,240 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>About</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About · Connie Trinh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --deepblue: #093369;
+        --ink: #ffffff;
+        --muted: #2596be;
+        --border: rgba(207, 226, 243, 0.12);
+        --hover-overlay: rgba(26, 25, 21, 0.52);
+        --font-serif: "EB Garamond", Georgia, serif;
+        --font-mono: "DM Mono", monospace;
+      }
+
+      html,
+      body {
+        background: var(--deepblue);
+        color: var(--ink);
+        font-family: var(--font-serif);
+        min-height: 100vh;
+      }
+
+      .site-wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 2.5rem 0 2rem;
+        border-bottom: 0.5px solid var(--border);
+        margin-bottom: 2.25rem;
+      }
+
+      .nav-name {
+        font-family: var(--font-serif);
+        font-size: 1.05rem;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2.25rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        font-weight: 300;
+        letter-spacing: 0.08em;
+        text-transform: lowercase;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--ink);
+      }
+
+      /* About layout */
+      .about-hero {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        align-items: start;
+        margin-bottom: 2rem;
+      }
+
+      .profile-box {
+        background: var(--deepblue);
+        border: 0.5px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+        min-height: 240px;
+        overflow: hidden;
+      }
+
+      .profile-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        color: rgba(255, 255, 255, 0.12);
+        font-family: var(--font-mono);
+        letter-spacing: 0.06em;
+        font-size: 0.9rem;
+      }
+
+      .about-content h1 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+        font-style: italic;
+      }
+
+      .about-content h2 {
+        font-size: 1rem;
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
+        color: var(--muted);
+        font-family: var(--font-mono);
+        letter-spacing: 0.06em;
+        text-transform: lowercase;
+        font-weight: 300;
+      }
+
+      .about-content p {
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 1rem;
+      }
+
+      .links-list {
+        margin-top: 1rem;
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        gap: 1.25rem;
+      }
+
+      .links-list a {
+        color: var(--muted);
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        text-decoration: none;
+      }
+
+      .links-list a:hover {
+        color: var(--ink);
+      }
+
+      footer {
+        margin-top: 3rem;
+        padding: 2rem 0 3rem;
+        border-top: 0.5px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      footer span {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--muted);
+      }
+      footer a {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      @media (max-width: 700px) {
+        .about-hero {
+          grid-template-columns: 1fr;
+        }
+        nav {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <a class="brand" href="index.html">Connie</a>
-        <nav class="site-nav">
-          <a href="index.html">Home</a>
-          <a href="about.html" aria-current="page">About</a>
-        </nav>
-      </div>
-    </header>
+    <div class="site-wrapper">
+      <nav>
+        <a href="/" class="nav-name">Connie Trinh</a>
+        <ul class="nav-links">
+          <li><a href="/">work</a></li>
+          <li><a href="/about.html" aria-current="page">about</a></li>
+          <li><a href="/contact.html">contact</a></li>
+        </ul>
+      </nav>
 
-    <main class="container about-page">
-      <section class="about-grid">
-        <!-- Blank image area: replace background-image or insert <img> as needed -->
-        <div
-          class="profile-image"
-          role="img"
-          aria-label="Profile image placeholder"
-        >
-          <!-- Add your image here, e.g.
-             <img src="assets/images/profile.jpg" alt="Connie"> -->
-        </div>
+      <main>
+        <section class="about-hero">
+          <div
+            class="profile-box"
+            role="img"
+            aria-label="Profile image placeholder"
+          >
+            <div class="profile-placeholder">Image placeholder</div>
+          </div>
 
-        <div class="about-content">
-          <h1>About Me</h1>
+          <div class="about-content">
+            <h1>About Me</h1>
 
-          <section class="bio">
             <h2>Biography</h2>
             <p>
-              <!-- Replace this with your biography -->
-              Connie is a designer based in New York City. In her free time,
-              you’ll find her noodling away on weird instruments, thinking and
-              writing about sociotechnical systems, or bopping around the City
-              as an amateur public space critic. She loves a good side quest and
-              has strong opinions about how they make us more human. Ask her
-              about it sometime!
+              Hi — I'm Connie. Connie is a designer based in New York City. In
+              her free time, you’ll find her noodling away on weird instruments,
+              thinking and writing about sociotechnical systems, or bopping
+              around the City as an amateur public space critic. She loves a
+              good side quest and has strong opinions about how they make us
+              more human
             </p>
-          </section>
 
-          <section class="mission">
             <h2>My Mission</h2>
             <p>
-              <!-- Replace this with your mission statement -->
               My mission is to create digital experiences that are inclusive,
-              performant, and delightful. I aim to solve real user problems with
-              pragmatic design and engineering.
+              performant, and delightful. I focus on pragmatic design and
+              thoughtful engineering to solve real user problems.
             </p>
-          </section>
 
-          <section class="links">
             <h2>Connect</h2>
-            <ul>
+            <ul class="links-list">
               <li>
                 <a
                   href="https://www.linkedin.com/in/YOUR-LINKEDIN"
@@ -72,20 +249,15 @@
                 >
               </li>
             </ul>
-          </section>
-        </div>
-      </section>
-    </main>
+          </div>
+        </section>
+      </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <small>&copy; <span id="year"></span> Connie</small>
-      </div>
-    </footer>
-
-    <script>
-      // Small script to set current year
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+      <footer>
+        <span>© 2026 Connie Trinh</span>
+        <a href="mailto:cht4ha@virginia.edu">cht4ha@virginia.edu</a>
+      </footer>
+    </div>
   </body>
 </html>
+<!doctype html>
