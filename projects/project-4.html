@@ -1,54 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 4 · Connie Trinh</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-  <style>/* same styles as project-1 */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --deepblue: #093369; --ink: #ffffff; --muted: #2596be; --border: rgba(207,226,243,0.12); --font-serif: 'EB Garamond', Georgia, serif; --font-mono: 'DM Mono', monospace; }
-    html, body { background: var(--deepblue); color: var(--ink); font-family: var(--font-serif); min-height: 100vh; }
-    .site-wrapper { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
-    nav { display:flex; justify-content:space-between; align-items:baseline; padding:2.5rem 0 2rem; border-bottom:0.5px solid var(--border); }
-    .nav-name { font-family:var(--font-serif); font-size:1.05rem; color:var(--ink); text-decoration:none; }
-    .nav-links { display:flex; gap:2.25rem; list-style:none; }
-    .nav-links a { font-family:var(--font-mono); font-size:0.72rem; color:var(--muted); text-decoration:none; }
-    .nav-links a:hover { color:var(--ink); }
-    .hero-image { width:100%; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:0.5px solid var(--border); min-height: 480px; display:flex; align-items:center; justify-content:center; color: rgba(255,255,255,0.12); font-family: var(--font-mono); }
-    .meta { display:flex; justify-content:space-between; align-items:center; margin:1.5rem 0; gap:1rem; }
-    .meta .title { font-style: italic; font-size:1.5rem; }
-    .meta .role { font-family:var(--font-mono); color:var(--muted); font-size:0.9rem; }
-    .description-box { border: 1px solid var(--border); padding: 1.25rem; margin-top: 1.5rem; background: rgba(255,255,255,0.01); }
-    .description-box p { color: rgba(255,255,255,0.92); line-height:1.6; }
-    .pager { display:flex; justify-content:space-between; margin-top: 1.5rem; gap:1rem; }
-    .pager a { color: var(--muted); font-family:var(--font-mono); text-decoration:none; }
-    .pager a:hover { color: var(--ink); }
-    footer { margin-top:3rem; padding:2rem 0 3rem; border-top:0.5px solid var(--border); display:flex; justify-content:space-between; }
-    footer span, footer a { font-family:var(--font-mono); font-size:0.68rem; color:var(--muted); text-decoration:none; }
-    @media (max-width:700px) { .meta { flex-direction:column; align-items:flex-start; } }
-  </style>
-</head>
-<body>
-  <div class="site-wrapper">
-    <nav>
-      <a href="/" class="nav-name">Connie Trinh</a>
-      <ul class="nav-links">
-        <li><a href="/">work</a></li>
-        <li><a href="/about.html">about</a></li>
-        <li><a href="/contact.html">contact</a></li>
-      </ul>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 4 · Connie Trinh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* same styles as project-1 */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --deepblue: #093369;
+        --ink: #ffffff;
+        --muted: #2596be;
+        --border: rgba(207, 226, 243, 0.12);
+        --font-serif: "EB Garamond", Georgia, serif;
+        --font-mono: "DM Mono", monospace;
+      }
+      html,
+      body {
+        background: var(--deepblue);
+        color: var(--ink);
+        font-family: var(--font-serif);
+        min-height: 100vh;
+      }
+      .site-wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 2.5rem 0 2rem;
+        border-bottom: 0.5px solid var(--border);
+      }
+      .nav-name {
+        font-family: var(--font-serif);
+        font-size: 1.05rem;
+        color: var(--ink);
+        text-decoration: none;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2.25rem;
+        list-style: none;
+      }
+      .nav-links a {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--muted);
+        text-decoration: none;
+      }
+      .nav-links a:hover {
+        color: var(--ink);
+      }
+      .hero-image {
+        width: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        border: 0.5px solid var(--border);
+        min-height: 480px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.12);
+        font-family: var(--font-mono);
+      }
+      .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.5rem 0;
+        gap: 1rem;
+      }
+      .meta .title {
+        font-style: italic;
+        font-size: 1.5rem;
+      }
+      .meta .role {
+        font-family: var(--font-mono);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .description-box {
+        border: 1px solid var(--border);
+        padding: 1.25rem;
+        margin-top: 1.5rem;
+        background: rgba(255, 255, 255, 0.01);
+      }
+      .description-box p {
+        color: rgba(255, 255, 255, 0.92);
+        line-height: 1.6;
+      }
+      .pager {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+        gap: 1rem;
+      }
+      .pager a {
+        color: var(--muted);
+        font-family: var(--font-mono);
+        text-decoration: none;
+      }
+      .pager a:hover {
+        color: var(--ink);
+      }
+      footer {
+        margin-top: 3rem;
+        padding: 2rem 0 3rem;
+        border-top: 0.5px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+      }
+      footer span,
+      footer a {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--muted);
+        text-decoration: none;
+      }
+      @media (max-width: 700px) {
+        .meta {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <nav>
+        <a href="/" class="nav-name">Connie Trinh</a>
+        <ul class="nav-links">
+          <li><a href="/">work</a></li>
+          <li><a href="/about.html">about</a></li>
+          <li><a href="/contact.html">contact</a></li>
+        </ul>
+      </nav>
 
-    <main>
-      <div class="hero-image">Project image placeholder</div>
-      <div class="meta"><div class="title">Project 4</div><div class="role">Role — UI / Frontend</div></div>
-      <div class="description-box"><p>Project 4 description placeholder.</p></div>
-      <div class="pager"><a href="project-3.html">← Previous</a><a href="project-5.html">Next →</a></div>
-    </main>
+      <main>
+        <div class="hero-image">Project image placeholder</div>
+        <div class="meta">
+          <div class="title">Project 4</div>
+          <div class="role">Role — UI / Frontend</div>
+        </div>
+        <div class="description-box">
+          <p>Project 4 description placeholder.</p>
+        </div>
+        <div class="pager">
+          <a href="project-3.html">← Previous</a
+          ><a href="project-5.html">Next →</a>
+        </div>
+      </main>
 
-    <footer><span>© 2026 Connie Trinh</span><a href="mailto:cht4ha@virginia.edu">cht4ha@virginia.edu</a></footer>
-  </div>
-</body>
+      <footer>
+        <span>© 2026 Connie Trinh</span
+        ><a href="mailto:cht4ha@virginia.edu">cht4ha@virginia.edu</a>
+      </footer>
+    </div>
+  </body>
 </html>
